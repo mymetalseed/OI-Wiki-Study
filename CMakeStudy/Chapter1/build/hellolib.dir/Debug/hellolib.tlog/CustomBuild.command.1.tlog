@@ -1,0 +1,10 @@
+^D:\DREAM\OIWIKI\OI-WIKI-STUDY\CMAKESTUDY\CHAPTER1\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dream/OIWIKI/OI-Wiki-Study/CMakeStudy/Chapter1 -BD:/Dream/OIWIKI/OI-Wiki-Study/CMakeStudy/Chapter1/build --check-stamp-file D:/Dream/OIWIKI/OI-Wiki-Study/CMakeStudy/Chapter1/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
